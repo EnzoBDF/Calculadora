@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+header{
+    padding: 60px;
+    background-color: darkviolet;
+    border-radius: 100px;
+    border: 2px solid darkviolet;
+    
+}
+.container {
+
+    padding: 40px;
+    border: 2px solid #c47de8;
+    margin: 30px;
+    border-radius: 15px;
+    font-size: medium;
+
+}
+
+input{
+margin-top: 20px;
+width: 90%;
+padding: 20px;
+border: 1px solid #c47de8;
+border-radius: 70px;
+
+}
+button{
+padding: 10px;
+border-radius: 40px;
+width: 20%;
+margin: 10px;
+}
+    </style>
+</head>
+<body bgcolor="#121414" text="floralwhite">
+    
+<header>
+<h1 align="center">Calculadora Personalizada</h1>
+</header>
+
+<div class="container">
+
+<input type="number" id="x" placeholder="Insira o valor">
+<input type="number" id="y" placeholder="Insira o valor">
+<input type="number" id="z" placeholder="Resultado" readonly>
+<button type="button" onclick="somar()">Soma</button>
+<button type="button" onclick="subtrair()">Subtração</button>
+<button type="button" onclick="dividir()">Divisão</button>
+<button type="button" onclick="multiplicar()">Multiplicação</button>
+<button type="button" onclick="resto()">Resto da divisão</button>
+<button type="button" onclick="potencia()">Potenciação</button>
+<button type="button" onclick="limpar()">Limpar Resultados</button>
+
+</div>
+<script>
+const somar = function(){
+let x = document.getElementById('x').value
+let y = document.getElementById('y').value
+z = parseFloat(x) + parseFloat(y)
+document.getElementById('z').value = z
+console.log(z)
+}
+
+const subtrair = function(){
+let x = document.getElementById('x').value
+let y = document.getElementById('y').value
+z = parseFloat(x) - parseFloat(y)
+document.getElementById('z').value = z
+console.log(z)
+}
+
+const dividir = function(){
+let x = document.getElementById('x').value
+let y = document.getElementById('y').value
+z = parseFloat(x) / parseFloat(y)
+document.getElementById('z').value = z
+console.log(z)
+}
+
+const multiplicar = function(){
+let x = document.getElementById('x').value
+let y = document.getElementById('y').value
+z = parseFloat(x) * parseFloat(y)
+document.getElementById('z').value = z
+console.log(z)
+}
+
+const resto = function(){
+let x = document.getElementById('x').value
+let y = document.getElementById('y').value
+z = parseFloat(x) % parseFloat(y)
+document.getElementById('z').value = z
+console.log(z)
+}
+
+const potencia = function(){
+
+ let x = document.getElementById('x').value
+let y = document.getElementById('y').value
+z = parseFloat(x) ** parseFloat(y)
+document.getElementById('z').value = z
+console.log(z)
+}
+
+const limpar = function(){
+    document.getElementById('x').value = "limpar"
+    document.getElementById('y').value = "limpar"
+    document.getElementById('z').value = "limpar"
+}
+</script>
+
+</body> 
+</html>
